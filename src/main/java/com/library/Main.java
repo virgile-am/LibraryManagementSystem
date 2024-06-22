@@ -1,3 +1,5 @@
+package src.main.java.com.library;
+
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;

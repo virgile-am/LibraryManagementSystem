@@ -1,34 +1,27 @@
 package src.main.java.com.library;
 
-import javafx.application.Platform;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class Main {
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/main/resources/javafx/views/main.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            primaryStage.setScene(scene);
+            primaryStage.setTitle("Library Management System");
+            primaryStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) {
-        // Start JavaFX application on the JavaFX Application Thread
-        Platform
-
-
-
-
-
-
-                .startup(() -> {
-            Stage primaryStage = new Stage();
-
-            // Create a label with the text "Hello, World!"
-            Label label = new Label("Hello, World!");
-
-            // Create a scene with the label as the root node
-            Scene scene = new Scene(label, 300, 200);
-
-            // Set the scene to the stage and show the stage
-            primaryStage.setScene(scene);
-            primaryStage.setTitle("JavaFX Hello World");
-            primaryStage.show();
-        });
+        launch(args);
     }
 }

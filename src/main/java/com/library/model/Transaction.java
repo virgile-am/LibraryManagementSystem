@@ -1,6 +1,6 @@
 package src.main.java.com.library.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Transaction {
     private int transactionID;
@@ -11,8 +11,7 @@ public class Transaction {
     private Date returnDate;
     private String status;
 
-    public Transaction() {}
-
+    // Constructor
     public Transaction(int transactionID, int bookID, int patronID, Date issueDate, Date dueDate, Date returnDate, String status) {
         this.transactionID = transactionID;
         this.bookID = bookID;
@@ -23,6 +22,9 @@ public class Transaction {
         this.status = status;
     }
 
+    public Transaction() {}
+
+    // Getters and Setters
     public int getTransactionID() {
         return transactionID;
     }
@@ -77,5 +79,18 @@ public class Transaction {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "transactionID=" + transactionID +
+                ", bookID=" + bookID +
+                ", patronID=" + patronID +
+                ", issueDate=" + issueDate +
+                ", dueDate=" + dueDate +
+                ", returnDate=" + returnDate +
+                ", status='" + status + '\'' +
+                '}';
     }
 }

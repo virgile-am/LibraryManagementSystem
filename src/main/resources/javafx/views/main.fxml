@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="rootPane" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.main.resources.javafx.controllers.MainController">
+    <top>
+        <HBox prefHeight="51.0" prefWidth="284.0" spacing="10">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <Button onAction="#handleShowBooks" text="Books" />
+            <Button onAction="#handleShowTransactions" text="Transactions" />
+            <Button onAction="#handleShowUserManagement" text="User Management" />
+        </HBox>
+    </top>
+    <center>
+        <!-- This is where the selected view will be loaded -->
+    </center>
+</BorderPane>

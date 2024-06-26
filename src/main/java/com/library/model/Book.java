@@ -132,4 +132,10 @@ public class Book {
     public IntegerProperty quantityProperty() {
         return quantity;
     }
+
+    // Override toString method to return the title
+    @Override
+    public String toString() {
+        return getTitle();
+    }
 }

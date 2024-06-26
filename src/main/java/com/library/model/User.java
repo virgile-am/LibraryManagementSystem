@@ -66,4 +66,8 @@ public class User {
     public void setRoleID(int roleID) {
         this.roleID.set(roleID);
     }
+    @Override
+    public String toString() {
+        return getUsername();
+    }
 }

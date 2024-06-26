@@ -76,4 +76,11 @@ public class Patron {
     public void setAddress(String address) {
         this.address.set(address);
     }
+
+    // Override toString method to return the name of the patron
+    @Override
+    public String toString() {
+        return getName();
+    }
+
 }

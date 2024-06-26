@@ -98,6 +98,12 @@ public class TransactionController {
         }
 
         selectedTransaction.setStatus(newStatus);
+        if ("Returned".equals(newStatus)) {
+            selectedTransaction.setReturnDate(Date.valueOf(LocalDate.now()));
+        } else {
+            selectedTransaction.setReturnDate(null); // Clear return date if status is "Not Returned"
+        }
+
         transactionDAO.updateTransaction(selectedTransaction);
         showAlert(Alert.AlertType.INFORMATION, "Status Updated", "Transaction status has been updated successfully.");
         loadTransactions();

@@ -1,4 +1,4 @@
-package src.main.java.com.library.config;
+package com.library.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,4 +1,4 @@
-package src.main.java.com.library.dao;
+package com.library.dao;
 
 public class Permission {
 }

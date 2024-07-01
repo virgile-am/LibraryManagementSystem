@@ -1,7 +1,7 @@
-package src.main.java.com.library.controller;
+package com.library.controller;
 
-import src.main.java.com.library.dao.BookDAO;
-import src.main.java.com.library.model.Book;
+import  com.library.dao.BookDAO;
+import  com.library.model.Book;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -136,7 +136,7 @@ public class BookController {
     }
 
     @FXML
-    private void handleAddBook() {
+    public void handleAddBook() {
         try {
             String title = titleField.getText();
             String author = authorField.getText();
@@ -161,7 +161,7 @@ public class BookController {
     }
 
     @FXML
-    private void handleUpdateBook() {
+    public void handleUpdateBook() {
         try {
             Book selectedBook = bookTable.getSelectionModel().getSelectedItem();
             if (selectedBook == null) {
@@ -198,7 +198,7 @@ public class BookController {
         }
     }
 
-    private void loadBooks() {
+    public void loadBooks() {
         bookTable.getItems().clear();
         bookTable.getItems().addAll(bookDAO.getAllBooks());
     }

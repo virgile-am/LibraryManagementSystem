@@ -1,4 +1,4 @@
-package src.main.java.com.library;
+package com.library;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +10,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/main/resources/javafx/views/main.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/javafx/views/main.fxml"));
             Scene scene = new Scene(loader.load());
 
             primaryStage.setScene(scene);

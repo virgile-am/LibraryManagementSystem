@@ -1,6 +1,6 @@
-package src.main.java.com.library.dao;
-import src.main.java.com.library.config.DatabaseConfig;
-import src.main.java.com.library.model.Role;
+package com.library.dao;
+import  com.library.config.DatabaseConfig;
+import  com.library.model.Role;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

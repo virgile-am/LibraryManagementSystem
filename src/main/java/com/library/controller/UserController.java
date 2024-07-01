@@ -1,20 +1,20 @@
-package src.main.java.com.library.controller;
+package com.library.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import src.main.java.com.library.dao.PatronDAO;
-import src.main.java.com.library.dao.UserDAO;
-import src.main.java.com.library.model.Patron;
-import src.main.java.com.library.model.User;
+import  com.library.dao.PatronDAO;
+import com.library.dao.UserDAO;
+import  com.library.model.Patron;
+import  com.library.model.User;
 
 public class UserController {
 
     // User UI elements
     @FXML
-    private TableView<User> userTable;
+    TableView<User> userTable;
 
     @FXML
     private TableColumn<User, Integer> userIdColumn;
@@ -39,7 +39,7 @@ public class UserController {
 
     // Patron UI elements
     @FXML
-    private TableView<Patron> patronTable;
+    TableView<Patron> patronTable;
 
     @FXML
     private TableColumn<Patron, Integer> patronIdColumn;
@@ -71,8 +71,8 @@ public class UserController {
     @FXML
     private TextField addressField;
 
-    private UserDAO userDAO;
-    private PatronDAO patronDAO;
+    UserDAO userDAO;
+    PatronDAO patronDAO;
     private ObservableList<User> userList;
     private ObservableList<Patron> patronList;
 

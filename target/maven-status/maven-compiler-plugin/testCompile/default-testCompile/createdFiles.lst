@@ -1,0 +1,11 @@
+com\library\controller\UserControllerTest.class
+com\library\controller\TransactionControllerTest.class
+com\library\dao\UserPrivilegeDAOTest.class
+com\library\model\TransactionTest.class
+com\library\controller\MainControllerTest.class
+com\library\model\BookTest.class
+com\library\dao\UserDAOTest.class
+com\library\model\UserTest.class
+com\library\dao\BookDAOTest.class
+com\library\controller\BookControllerTest.class
+com\library\sudo.class

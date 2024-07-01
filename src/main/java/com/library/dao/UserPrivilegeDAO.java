@@ -1,7 +1,7 @@
-package src.main.java.com.library.dao;
+package com.library.dao;
 
-import src.main.java.com.library.config.DatabaseConfig;
-import src.main.java.com.library.model.UserPrivilege;
+import  com.library.config.DatabaseConfig;
+import com.library.model.UserPrivilege;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,15 +1,15 @@
-package src.main.java.com.library.controller;
+package com.library.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import src.main.java.com.library.dao.BookDAO;
-import src.main.java.com.library.dao.TransactionDAO;
-import src.main.java.com.library.dao.UserDAO;
-import src.main.java.com.library.model.Book;
-import src.main.java.com.library.model.Transaction;
-import src.main.java.com.library.model.User;
+import  com.library.dao.BookDAO;
+import  com.library.dao.TransactionDAO;
+import  com.library.dao.UserDAO;
+import  com.library.model.Book;
+import  com.library.model.Transaction;
+import  com.library.model.User;
 
 import java.sql.Date;
 import java.time.LocalDate;

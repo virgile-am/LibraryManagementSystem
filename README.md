@@ -12,7 +12,7 @@ The **Library Management System** is a comprehensive solution for managing libra
 ## Features
 
 - **Books Management**: Add, remove, and update book details.
-- **Patrons Management**: Register, update, and remove patrons.
+- **User  Management**: Register, update, and remove patrons.
 - **Transaction Management**: Manage lending, returning, and reserving books.
 - **User Interface**: Developed with JavaFX for intuitive interactions.
 

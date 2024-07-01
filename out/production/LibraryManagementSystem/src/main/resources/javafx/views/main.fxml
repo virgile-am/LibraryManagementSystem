@@ -1,21 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="src.main.resources.javafx.controllers.MainController" spacing="10" padding="10">
+    <!-- Text Input -->
+    <Label text="Text Input:"/>
+    <TextArea fx:id="inputText" prefHeight="100"/>
 
-<BorderPane fx:id="rootPane" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.main.resources.javafx.controllers.MainController">
-    <top>
-        <HBox prefHeight="51.0" prefWidth="284.0" spacing="10">
-            <padding>
-                <Insets bottom="10" left="10" right="10" top="10" />
-            </padding>
-            <Button onAction="#handleShowBooks" text="Books" />
-            <Button onAction="#handleShowTransactions" text="Transactions" />
-            <Button onAction="#handleShowUserManagement" text="User Management" />
-        </HBox>
-    </top>
-    <center>
-        <!-- This is where the selected view will be loaded -->
-    </center>
-</BorderPane>
+    <!-- Regex Operations -->
+    <Label text="Regex Operations:"/>
+    <HBox spacing="10">
+        <TextField fx:id="regexPattern" promptText="Regex Pattern"/>
+        <TextField fx:id="replaceWith" promptText="Replace With"/>
+    </HBox>
+    <HBox spacing="10">
+        <Button text="Find Matches" onAction="#handleFindMatches"/>
+        <Button text="Replace" onAction="#handleReplace"/>
+        <Button text="Highlight Matches" onAction="#handleHighlightMatches"/>
+    </HBox>
+
+    <!-- Results -->
+    <Label text="Results:"/>
+    <VBox fx:id="resultsArea" prefHeight="100"/>
+
+    <!-- Data Collections -->
+    <Label text="Data Collections:"/>
+    <HBox spacing="10">
+        <ComboBox fx:id="collectionType">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="List"/>
+                    <String fx:value="Set"/>
+                    <String fx:value="Map"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <ComboBox fx:id="currentCollection"/>
+    </HBox>
+    <VBox fx:id="collectionArea" prefHeight="100"/>
+    <HBox spacing="10">
+        <TextField fx:id="newItem" promptText="New Item"/>
+        <Button text="Add" onAction="#handleAddToCollection"/>
+        <Button text="Update" onAction="#handleUpdate"/>
+        <Button text="Delete" onAction="#handleDelete"/>
+        <Button text="Clear" onAction="#handleClearCollection"/>
+    </HBox>
+</VBox>
